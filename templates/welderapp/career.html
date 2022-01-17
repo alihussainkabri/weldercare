@@ -1,0 +1,110 @@
+{% extends 'welderapp/base.html' %}
+{% load static %}
+
+{% block body %}
+<!-- banner section -->
+<div class="career-banner"></div>
+
+<div class="career-page-div my-5">
+    <h3 class="mb-5 heading-color container"><span class="font-weight-300">If you're looking for a soul calling
+            then</span> this is opportunity
+        knocking.</h3>
+    <div class="mx-3">
+        <div class="opportunity-form container p-5">
+            <p class="mb-5 font-weight-300">Join Welldercare to make a positive impact on society while working with
+                visionary leaders
+                who are challenging the status quo.
+                If you like bringing joy to the elderly as much as you like taking home a happy salary, then write
+                to us
+                at <a href="mailto:careers@welldercare.life" class="para-a">careers@welldercare.life</a> or
+                fill in the form below.</p>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+            <form id="career" action="/jobPost/" enctype="multipart/form-data" method="POST">
+                {% csrf_token %}
+                <input type="hidden" id="status" value="{{value}}" />
+                <div class="row">
+                    <div class="col-md-4">
+                        <input required class="mb-4 mb-md-0" type="text" name="name" placeholder="Name">
+                    </div>
+                    <div class="col-md-4">
+                        <input required class="mb-4 mb-md-0" type="text" name="mobile" placeholder="Mobile">
+                    </div>
+                    <div class="col-md-4">
+                        <input required class="mb-4 mb-md-0" name="email" type="email" placeholder="Email">
+                        <input required id="upload-file-id" name="file" type="file" style="display: none;">
+                    </div>
+                </div>
+                <div class="row mt-4 mt-md-5">
+
+                    <div onclick="openInput(this);"
+                        class="col-md-8 px-0 d-flex justify-content-between align-items-center upload-file">
+                        <img src={% static 'image/upload-icon.png' %} alt="">
+                        <p class="mb-0">
+                            <span id="upload-resume-text-span">
+                                Upload your resume
+                            </span>
+                            <span id="file-name-span">
+
+                            </span>
+                        </p>
+                        <a href="javascript:void(0);">Browse</a>
+                    </div>
+                    <div class="col-md-4 px-0 d-flex justify-content-md-end justify-content-center mt-md-0 mt-4">
+
+                        <input class="btn" type="submit" value="Submit">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="content container my-5 current-looking-for-div">
+        <div class="mb-5">
+            <h1>Currently looking for:</h1>
+        </div>
+        <div>
+            {% for career in carrers%}
+            <div class="d-flex align-items-center">
+                <h3 class="mr-4">{{career.title}}</h3>
+                <p class="content-sub-head font-weight-300">Job Code: {{career.code}}</p>
+            </div>
+            <p class="mb-4">Job description:<span class="font-weight-300">
+                    {{career.description}}
+            </p>
+            <p class="mb-5 font-weight-300">To apply, email your resume to <a class="font-italic"
+                    href="mailto:{{career.email}}">{{career.email}}</a></span> </p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block js %}
+
+<script>
+    function openInput(e) {
+        $("#upload-file-id").trigger("click");
+    }
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('input[type="file"]').change(function (e) {
+            var file_name = e.target.files[0].name;
+            $('#upload-resume-text-span').hide();
+            document.getElementById("file-name-span").innerHTML = file_name
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        let value = $("#status").val();
+        if (value == "1"){
+            toastr.success("Your Entry Has Been Saved Successfully!","success");
+            $("#status").val("0")
+        }
+    })
+</script>
+
+{% endblock %}

@@ -1,0 +1,230 @@
+{% extends 'welderapp/base.html' %}
+{% load static %}
+
+{% block body %}
+<!-- banner section -->
+<div class="who-we-are-banner"></div>
+
+<!-- we believe life section -->
+<div class="we-believe-life-div container mt-5">
+  <h2 class="mb-4">
+    <font color=#2e3192>We believe <span>life after 60 should be about joy</span> and not just getting by.</font>
+  </h2>
+  <p class="mb-1">Welldercare was born out of collaborative research with world renowned academia in India, EU & USA,
+    and a convergence of the best technology brains with global award-winning innovations, the largest players in the
+    senior living space in the EU, the most innovative smart home technologists merging with deep hyper personalised
+    care and behaviour design with a unique flavour of hospitality that takes from India’s ancient value systems.All
+    this means we bring an unparalleled depth and insight to keep you happy and healthy.<a
+      class="font-italic text-decoration-none" href="javascript:void(0);" onclick="expandText(this);"
+      data-id="wwr-rm-1">
+      <font color="#323232">...</font>
+      <font size:"12px">Read more>></font>
+    </a>
+    <span class="span-d-none font-weight-300" id="wwr-rm-1">
+      <br />Welldercare aims to be the Gold Standard in Person Centered Curated Care by holistically addressing the
+      needs of an ageing demographic - from a 'pre-need' stage in life by addressing psychosocial needs to lifestyle
+      support and intensive attendant care through a convergence of cognitive behavioural design-based care & superior
+      technology.<br />
+      We are pioneering India's first 'Lifestyle As A Service' (LAAS) model in Later Life Living, offering a
+      revolutionary alternative to the traditional real-estate driven retirement homes. Where our clients get to choose
+      from our network of resorts across India that combine world-class hospitality, healthcare, and wellness for a
+      service fee. This model offers an all-inclusive later life living solution which is flexible and suited for the 60
+      plus without a heavy investment.<br />
+      In addition to keeping you safe and protected, we bring our cutting edge technology suite – Care Shield – to your
+      home at an easily affordable monthly subscription to track all your health parameters and detect any anomalies
+      non-invasively, giving you access to the best doctors and healthcare infrastructure in your city. Care Shield
+      comes with life saving features like being ever alert for falls and ensuring a lightning speed response in the
+      unlikely event of a fall in your home, especially in your bathroom - 86% of falls in a bathroom that go undetected
+      within an hour often result in fatalities.<br />
+    </span>
+  </p>
+  <!--<div class="read-more-btn">
+    <a class="font-italic" href="javascript:void(0);" onclick="expandText(this);" data-id="wwr-rm-1">Read more>></a>
+  </div>-->
+  <h6 class="mt-3 mb-5">We exist to inspire, nature, and revitalize the spirit of veterans with person-centered
+    bespoke care and
+    intuitive services.</h6>
+  <div class="row">
+    <div class="col-md-4">
+      <img class="img-fluid" src={% static 'image/scatting-img.png' %} alt="">
+    </div>
+    <div class="col-md-4 mt-4 mt-md-0">
+      <h2>Our version</h2>
+      <p>To inspire, support, and empower every veteran of life with an unparalleled wellness and care experience that
+        facilitates ageing with joy, pride and dignity.</p>
+    </div>
+    <div class="col-md-4">
+      <h2>Our mission</h2>
+      <p>Build a value driven Global Enterprise that delivers meaningful impact in society in General Health & Ageing,
+        by being the convergence of Holistic Healthcare, Superior Technology & the best hospitality standards.</p>
+    </div>
+  </div>
+</div>
+
+<!-- our core leadership team section -->
+<div class="our-core-team-div mt-5">
+  <h2 class="text-capitalize">our <span>core leadership</span> team</h2>
+  <div class="d-flex flex-nowrap container">
+    <div class="inner-card mr-4">
+      <img src={% static 'image/core-team-1.png' %} alt="">
+      <h6 class="mb-3 mt-4">Kanishka Acharya <span class="font-italic">(Founder)</span></h6>
+      <p class="mb-0">The visionary behind the Welldercare mission, Kanishka’s journey as a serial entrepreneur
+        includes 2 IPOs by the age of 24. He brings 34 years<a class="font-italic text-decoration-none"
+          href="javascript:void(0);" onclick="expandText(this);" data-id="wwr-rm-2">
+          <font color="#323232">...</font>
+          <font size:"12px">Read more>></font>
+        </a>
+        <span id="wwr-rm-2" class="span-d-none">of demonstrated history in building successful businesses in IT
+          hardware, Food processing, Agri-Tech, Mining & Infrastructure and Biosciences across the globe. Kanishka
+          brings a deep passion, commitment, and vision to this business, largely drawn from personal experience and
+          philanthropy. This venture is his karmic payback to society.
+        </span>
+      </p>
+    </div>
+
+    <div class="inner-card mr-4">
+      <img src={% static 'image/core-team-2.png' %} alt="">
+      <h6 class="mb-3 mt-4">Roeland Pelgrims</h6>
+      <p class="mb-0">Roeland Pelgrims is a passionate entrepreneur with over €1B exit value realized as angel investor,
+        co-founder, executive and director. <a class="font-italic text-decoration-none" href="javascript:void(0);"
+          onclick="expandText(this);" data-id="wwr-rm-3">
+          <font color="#323232">...</font>
+          <font size:"12px">Read more>></font>
+        </a>
+        <span id="wwr-rm-3" class="span-d-none">
+          With a PhD in psychology, an MBA from Vlerick Business School and master’s degrees in linguistics and law, he
+          is driven by a desire for impactful innovation. A former board member of Belgian elderly care market leader
+          Armonea, Roeland participated in the sale of the company to French Colisée to form the 4th largest senior care
+          group in Europe. As CEO of One Smart Control, he realized the merger with Swiss technology developers
+          DigitalStrom and eSmart, after which the resulting Aizo Group became European market leader in power line
+          solutions, with installations in Germany, Switzerland, Belgium, and the Netherlands. Roeland co-founded Nobi
+          in 2018.
+        </span>
+      </p>
+    </div>
+
+    <div class="inner-card mr-4">
+      <img src={% static 'image/core-team-3.png' %} alt="">
+      <h6 class="mb-3 mt-4">Chaitanya Pande</h6>
+      <p class="mb-0">Chaitanya brings over two decades experience in credit, finance & investments. He worked as the
+        Chief Investment Officer<a class="font-italic text-decoration-none" href="javascript:void(0);"
+          onclick="expandText(this);" data-id="wwr-rm-4">
+          <font color="#323232">...</font>
+          <font size:"12px">Read more>></font>
+        </a>
+        <span id="wwr-rm-4" class="span-d-none">
+          (Fixed Income and Structured Products) at ICICI Prudential AMC. He currently serves on the board of Northern
+          Arc Investment Managers and Pipeline Infrastructure Limited.
+        </span>
+      </p>
+    </div>
+
+    <div class="inner-card mr-4">
+      <img src={% static 'image/core-team-4.png' %} alt="">
+      <h6 class="mb-3 mt-4">Bert De Haes</h6>
+      <p class="mb-0">Bert De Haes is a serial smart home entrepreneur and technology leader. His focus is making smart
+        technology part of everyday life to bring<a class="font-italic text-decoration-none" href="javascript:void(0);"
+          onclick="expandText(this);" data-id="wwr-rm-5">
+          <font color="#323232">...</font>
+          <font size:"12px">Read more>></font>
+        </a>
+        <span id="wwr-rm-5" class="span-d-none">
+          comfort, safety and fun to life in a sustainable world. A former managing director of global leader in
+          automated lighting Vari-Lite, Bert founded domotics pioneer Intensia in 1999 with amongst others a strong
+          product portfolio digitalizing nursing homes and assisted living flats. Three years later a successful exit to
+          Belgian market leader Niko followed, where Bert joined the management board to drive the growth of the
+          connected home segment in the Benelux market. In 2013, Bert founded a second smart home venture: One Smart
+          Control. With power line technology based solutions, the company delivered installations in over 12000 homes
+          in Europe by the time Bert sold his stake in the company to a venture capital fund. Bert co-founded Nobi in
+          2018.
+        </span>
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<!-- our executive leadership team section -->
+<div class="our-executive-team-div mt-5">
+  <h2 class="text-capitalize container">our <span>executive leadership</span> team</h2>
+  <div class="d-flex flex-nowrap container">
+    <div class="inner-card mr-4">
+      <img src={% static 'image/executive-team-1.png' %} alt="">
+      <h6 class="mb-2 mt-4">Navritu Kaushal Rai</h6>
+      <h6 class="font-weight-300 FS-14 font-italic">VP-Business Development and Strategy</h6>
+      <p class="mb-0">Experienced operations and client relationship professional with a diverse portfolio in the
+        hospitality, tourism, info tech and power sectors.</p>
+    </div>
+
+    <div class="inner-card mr-4">
+      <img src={% static 'image/executive-team-2.png' %} alt="">
+      <h6 class="mb-2 mt-4">Saibal Sen</h6>
+      <h6 class="font-weight-300 FS-14 font-italic">VP - Asset Acquisitions</h6>
+      <p class="mb-0">A seasoned hospitality professional with over two decades of industry experience in working with
+        top hotel brands across the country.</p>
+    </div>
+
+    <div class="inner-card mr-4">
+      <img src={% static 'image/executive-team-3.png' %} alt="">
+      <h6 class="mb-2 mt-4">Jayanand Aroskar</h6>
+      <h6 class="font-weight-300 FS-14 font-italic">Head of Technology</h6>
+      <p class="mb-0">IT professional with experience in building scalable and secure IT infrastructure primarily for
+        the health and life science industry.</p>
+    </div>
+
+    <div class="inner-card mr-4">
+      <img src={% static 'image/executive-team-4.png' %} alt="">
+      <h6 class="mb-2 mt-4">Viraj Govekar</h6>
+      <h6 class="font-weight-300 FS-14 font-italic">Head - Human Resources</h6>
+      <p class="mb-0">HR professional with 18+ years of experience in Strategic HR & IR function across various
+        industries such as Hospitality, Gaming, Entertainment, Trading and Logistics.</p>
+    </div>
+
+    <div class="inner-card mr-4">
+      <img src={% static 'image/executive-team-5.png' %} alt="">
+      <h6 class="mb-2 mt-4">Mudit Saxena</h6>
+      <h6 class="font-weight-300 FS-14 font-italic">Life Transformation Expert,
+        Coach and Facilitator</h6>
+      <p class="mb-0">International Life Transformation expert with clients across the globe from the US, Canada,
+        Europe, Middle east and Asia. Empowers clients to find purpose and meaning in life and create an ideal life by
+        design. Spent 30 years as a C suite executive working in 5 countries running businesses and developing leaders.
+        Works with neuroscience, mindfulness and spirituality to empower change.</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- lower cards section -->
+<section id="partner">
+  <div class="who-we-are-lower-card-div container">
+    <div class="row justify-content-lg-between justify-content-center">
+      <div class="col-md-10 col-lg-6 inner-card mb-4 mb-lg-0">
+        <img src={% static 'image/partner.png' %} alt="">
+        <h3>Partner with us </h3>
+        <p class="mb-0">If you'd like to join our journey to revolutionise retirement living, write in to <a
+            class="font-italic" href="mailto:partnerships@welldercare.life">partnerships@welldercare.life</a></p>
+      </div>
+
+      <div class="col-md-10 col-lg-6 inner-card">
+        <img src={% static 'image/build-career.png' %} alt="">
+        <h3>Build a career you can be proud of </h3>
+        <p class="mb-0">Want to make a positive impact on society and your career? <a class="font-italic"
+            href="/career.html"><br />Join
+            us>></a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block js %}
+
+<script>
+  function expandText(e) {
+    $(`#${$(e).data("id")}`).show();
+    $(e).hide();
+  }
+</script>
+
+{% endblock %}

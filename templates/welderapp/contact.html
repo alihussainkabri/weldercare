@@ -1,0 +1,55 @@
+{% extends 'welderapp/base.html' %}
+{% load static %}
+
+{% block body %}
+<!-- contact page form  -->
+<div class="contact-us-banner"></div>
+
+<div class="pt-4 contact-form-main-div">
+    <h3 class="mb-5 heading-color container"><span class="font-weight-300">Whatever's in your mind, </span>we're
+        always
+        happy to talk.</h3>
+    <div class="mx-3">
+        <div class="form-div container">
+            <p class="mb-1 font-weight-300">Got questions? Have feedback? Want to know how to join the Best Years
+                Program?</p>
+            <p class="mb-5"><span class="font-weight-300">Get in touch with our relationship manager</span> <b>Pratika
+                    on <a href="tel:+91 9137186158" style="color:black;">+91 9137186158 </b></a><span
+                    class="font-weight-300">or</span> <b>Email
+                    <a href="mailto:Pratika@Welldercare.life" style="color:black;">Pratika@Welldercare.life</b></a></p>
+
+            <form id="contact" method="POST" action="/contactPost/">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-md-4">
+                        <input type="hidden" id="contact-status" value="{{value}}" />
+                        <input class="mb-4 mb-md-0" name="name" required type="text" placeholder="Name">
+                    </div>
+                    <div class="col-md-4">
+                        <input class="mb-4 mb-md-0" name="mobile" required type="number" placeholder="Mobile">
+                    </div>
+                    <div class="col-md-4">
+                        <input class="mb-4 mb-md-0" name="email" required type="email" placeholder="Email">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center justify-content-md-start">
+                    <input class="interested-btn" type="submit" value="I am interested">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block js %}
+<script>
+    $(document).ready(function () {
+        let value = $("#contact-status").val();
+
+        if (value == "1"){
+            $("#contact-status").val("0");
+            toastr.success("Your information has been submitted successfully!","success")
+        }
+    })
+</script>
+{% endblock %}
